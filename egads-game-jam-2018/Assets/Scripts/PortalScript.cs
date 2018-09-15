@@ -39,8 +39,10 @@ public class PortalScript : MonoBehaviour
             lastFireTime = Time.time;
         }
         timeToFire = (float)(2 - .05 * ((int)(shieldScript.getBlockCount() / 5)));
+        Debug.Log(timetoFire);
         projectileSpeed = (float)(1 + (shieldScript.getBlockCount() / 75.0));
-	}
+        Debug.Log(projectileSpeed);
+    }
 
     public float getBaseSpeed()
     {
