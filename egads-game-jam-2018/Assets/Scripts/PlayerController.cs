@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    int playerDirection;
 	void Start()
 	{
-        playerDirection = 0;
     }
 
 	void Update()
