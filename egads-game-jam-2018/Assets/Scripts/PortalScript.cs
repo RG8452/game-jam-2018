@@ -64,7 +64,11 @@ public class PortalScript : MonoBehaviour
         if (shieldScript.getBlockCount() % 5 == 0 && temp != shieldScript.getBlockCount()) 
         {
             Debug.Log(shieldScript.getBlockCount() + "  " + temp + "  " + spawnRate);
-            spawnRate -= 0.25f;
+            spawnRate *=0.75f;
+            if(spawnRate<0.001)
+            {
+                spawnRate = 0.001f;
+            }
             temp = shieldScript.getBlockCount();
             repeater();
 
