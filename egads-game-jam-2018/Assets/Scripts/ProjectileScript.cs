@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour
 {
-	public float moveSpeed;
+    public float moveSpeed;
     private int portalIndex;
     public PortalScript portalScript;
 
