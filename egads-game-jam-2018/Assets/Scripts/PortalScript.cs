@@ -10,9 +10,8 @@ public class PortalScript : MonoBehaviour
 
 	void Start()
 	{
-		portals = GameObject.FindGameObjectsWithTag("Portal");
-		int point = Random.Range(0, portals.Length - 1);
-		GameObject spawnPoint = portals[point];
+        portals = new GameObject[] {GameObject.Find("Portal"), GameObject.Find("Portal (1)"),
+                                    GameObject.Find("Portal (2)"), GameObject.Find("Portal (3)") };
 		projectile = Instantiate(projectilePrefab);
 
 	}
