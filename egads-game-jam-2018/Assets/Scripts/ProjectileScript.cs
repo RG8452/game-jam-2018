@@ -15,7 +15,7 @@ public class ProjectileScript : MonoBehaviour
 
 	void Start()
 	{
-        moveSpeed = portalScript.getBaseSpeed();
+        moveSpeed = portalScript.GetBaseSpeed();
         portalIndex = Random.Range(0, portalScript.portals.Length - 1);
         gameObject.transform.position = portalScript.portals[portalIndex].transform.position;
 	}
