@@ -27,6 +27,7 @@ public class ProjectileScript : MonoBehaviour
         {
             case 0:
                 transform.Translate(new Vector3(0, -move, 0));
+                transform.rotate(Quaternion.Euler(0, 0, 270));
                 break;
             case 1:
                 transform.Translate(new Vector3(-move, 0, 0));
