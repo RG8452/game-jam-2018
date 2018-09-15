@@ -20,7 +20,6 @@ public class PortalScript : MonoBehaviour
         portals = new GameObject[] {GameObject.Find("Portal"), GameObject.Find("Portal (1)"),
                                     GameObject.Find("Portal (2)"), GameObject.Find("Portal (3)") };
         shieldScript = GameObject.Find("Shield").GetComponent<ShieldScript>();
-		projectile = Instantiate(slowProjectilePrefab);
         lastFireTime = Time.time;
 	}
 
@@ -39,9 +38,7 @@ public class PortalScript : MonoBehaviour
             lastFireTime = Time.time;
         }
         timeToFire = (float)(2 - .05 * ((int)(shieldScript.getBlockCount() / 5)));
-        Debug.Log(timetoFire);
         projectileSpeed = (float)(1 + (shieldScript.getBlockCount() / 75.0));
-        Debug.Log(projectileSpeed);
     }
 
     public float getBaseSpeed()

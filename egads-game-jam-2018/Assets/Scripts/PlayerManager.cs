@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    int health;
+    public int lives = 3;
 
 
 	void Start()
@@ -14,13 +14,18 @@ public class PlayerManager : MonoBehaviour
 
 	void Update()
 	{
-		
+		print("Lives: " + lives);
 	}
+
     void OnCollisionEnter(Collision col)
     {
-        --health;
-        //Debug.Log(col.gameObject.name);
+        lives--;
+		print(col.gameObject.name);
         Destroy(col.gameObject);
-        
+
+		if(lives <= 0)
+		{
+			Destroy(gameObject);
+		}
     }
 }
