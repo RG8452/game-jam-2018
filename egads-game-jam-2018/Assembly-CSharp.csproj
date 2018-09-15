@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\PortalScript.cs" />
      <Compile Include="Assets\Scripts\ProjectileScript.cs" />
+     <Compile Include="Assets\Scripts\ShieldScript.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/will/Desktop/GitHub/game-jam-2018/egads-game-jam-2018/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

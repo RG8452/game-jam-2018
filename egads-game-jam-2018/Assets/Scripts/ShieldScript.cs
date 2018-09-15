@@ -2,24 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
-{
-    int health;
+public class ShieldScript : MonoBehaviour {
 
-
-	void Start()
-	{
+	// Use this for initialization
+	void Start () {
 		
 	}
-
-	void Update()
-	{
+	
+	// Update is called once per frame
+	void Update () {
 		
 	}
     void OnCollisionEnter(Collision col)
     {
-        --health;
-        //Debug.Log(col.gameObject.name);
+        Debug.Log(col.gameObject.name);
         Destroy(col.gameObject);
         
     }
