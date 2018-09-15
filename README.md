@@ -24,10 +24,10 @@ Ask Ryan if you have any questions about what to do.
 General process:
 * git pull
 * make changes
+* git add *
 * git stash
 * git pull
 * git stash pop
-* git add *
 * git commit -a -m "message"
 * git push
 
