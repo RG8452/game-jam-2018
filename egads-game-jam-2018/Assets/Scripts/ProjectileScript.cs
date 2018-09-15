@@ -5,20 +5,38 @@ using UnityEngine;
 public class ProjectileScript : MonoBehaviour
 {
 	public float moveSpeed;
+    private int portalIndex;
+    public PortalScript portalScript;
 
 	void Awake()
 	{
+        portalScript = GameObject.Find("Portals").GetComponent<PortalScript>();
 	}
 
 	void Start()
 	{
 		moveSpeed = 1f;
+        portalIndex = Random.Range(0, portalScript.portals.Length - 1);
+        gameObject.transform.position = portalScript.portals[portalIndex].transform.position;
 	}
 
 	void Update()
 	{
-		float moveHorizontal = moveSpeed * Time.deltaTime;
-
-		transform.Translate(new Vector3(moveHorizontal, 0, 0));
+		float move = moveSpeed * Time.deltaTime;
+        switch(portalIndex)
+        {
+            case 0:
+                transform.Translate(new Vector3(0, -move, 0));
+                break;
+            case 1:
+                transform.Translate(new Vector3(-move, 0, 0));
+                break;
+            case 2:
+                transform.Translate(new Vector3(0, move, 0));
+                break;
+            case 3:
+                transform.Translate(new Vector3(move, 0, 0));
+                break;
+        }
 	}
 }
