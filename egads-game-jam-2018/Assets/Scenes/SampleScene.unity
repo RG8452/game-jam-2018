@@ -164,6 +164,10 @@ MonoBehaviour:
   - {fileID: 1061793755}
   projectilePrefab: {fileID: 1079078351139632, guid: 04f74f808ae5fef4a85bb4953e3df113,
     type: 2}
+  fastProjectilePrefab: {fileID: 1799918932240656, guid: adda3b965966d244880429d409e33e31,
+    type: 2}
+  slowProjectilePrefab: {fileID: 1450008720918802, guid: f8d0e345d289c8c43977d295cb6bfa64,
+    type: 2}
 --- !u!1 &431612781
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +181,7 @@ GameObject:
   - component: {fileID: 431612785}
   - component: {fileID: 431612786}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

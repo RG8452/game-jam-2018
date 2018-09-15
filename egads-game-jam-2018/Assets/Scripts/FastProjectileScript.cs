@@ -7,7 +7,6 @@ public class FastProjectileScript : MonoBehaviour
     public float moveSpeed;
     private int portalIndex;
     public PortalScript portalScript;
-    public ProjectileScript projectileScript;
 
     void Awake()
     {
@@ -16,7 +15,7 @@ public class FastProjectileScript : MonoBehaviour
 
     void Start()
     {
-        moveSpeed = projectileScript.moveSpeed * 2;
+        moveSpeed = portalScript.getBaseSpeed() * 2;
         portalIndex = Random.Range(0, portalScript.portals.Length - 1);
         gameObject.transform.position = portalScript.portals[portalIndex].transform.position;
     }

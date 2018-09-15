@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileScript : MonoBehaviour
+public class SlowProjectileScript : MonoBehaviour
 {
     public float moveSpeed;
     private int portalIndex;
     public PortalScript portalScript;
 
-	void Awake()
-	{
+    void Awake()
+    {
         portalScript = GameObject.Find("Portals").GetComponent<PortalScript>();
-	}
+    }
 
-	void Start()
-	{
-        moveSpeed = portalScript.getBaseSpeed();
+    void Start()
+    {
+        moveSpeed = portalScript.getBaseSpeed() / 2;
         portalIndex = Random.Range(0, portalScript.portals.Length - 1);
         gameObject.transform.position = portalScript.portals[portalIndex].transform.position;
-	}
+    }
 
-	void Update()
-	{
-		float move = moveSpeed * Time.deltaTime;
-        switch(portalIndex)
+    void Update()
+    {
+        float move = moveSpeed * Time.deltaTime;
+        switch (portalIndex)
         {
             case 0:
                 transform.Translate(new Vector3(0, -move, 0));
@@ -38,5 +38,5 @@ public class ProjectileScript : MonoBehaviour
                 transform.Translate(new Vector3(move, 0, 0));
                 break;
         }
-	}
+    }
 }
