@@ -8,7 +8,7 @@ public class PortalScript : MonoBehaviour
 	public GameObject projectilePrefab;
     public GameObject fastProjectilePrefab;
     public GameObject slowProjectilePrefab;
-    private const float BASE_PROJECTILE_SPEED = 1f;
+    private const float BASE_PROJECTILE_SPEED = 1.5f;
     private float lastFireTime;
     private float timeToFire = 2f;
     private float spawnRate = 2.00f;
@@ -61,7 +61,11 @@ public class PortalScript : MonoBehaviour
         if (shieldScript.getBlockCount() % 5 == 0 && temp != shieldScript.getBlockCount()) 
         {
             Debug.Log(shieldScript.getBlockCount() + "  " + temp + "  " + spawnRate);
-            spawnRate -= 0.25f;
+            spawnRate *=0.95f;
+            if(spawnRate<0.5)
+            {
+                spawnRate = 0.5f;
+            }
             temp = shieldScript.getBlockCount();
             Repeater();
         }

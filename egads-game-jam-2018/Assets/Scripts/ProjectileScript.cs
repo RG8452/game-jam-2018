@@ -15,8 +15,13 @@ public class ProjectileScript : MonoBehaviour
 
 	void Start()
 	{
+<<<<<<< HEAD
         moveSpeed = portalScript.GetBaseSpeed();
         portalIndex = Random.Range(0, portalScript.portals.Length - 1);
+=======
+        moveSpeed = portalScript.getBaseSpeed();
+        portalIndex = Random.Range(0, portalScript.portals.Length );
+>>>>>>> d2257b9fbc9ca2daa8e897c90454ca2f7fb75bdc
         gameObject.transform.position = portalScript.portals[portalIndex].transform.position;
 	}
 
@@ -27,6 +32,7 @@ public class ProjectileScript : MonoBehaviour
         {
             case 0:
                 transform.Translate(new Vector3(0, -move, 0));
+                transform.rotate(Quaternion.Euler(0, 0, 270));
                 break;
             case 1:
                 transform.Translate(new Vector3(-move, 0, 0));
