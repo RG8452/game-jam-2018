@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    int health;
+
+
 	void Start()
 	{
 		
@@ -13,4 +16,10 @@ public class PlayerManager : MonoBehaviour
 	{
 		
 	}
+    void OnCollisionEnter(Collision col)
+    {
+        --health;
+        Destroy(col.gameObject);
+        Destroy(this);
+    }
 }
