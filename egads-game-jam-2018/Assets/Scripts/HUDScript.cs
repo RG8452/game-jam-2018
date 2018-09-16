@@ -19,7 +19,7 @@ public class HUDScript : MonoBehaviour
 
 	void Update()
 	{
-        pManagerScript.lives++;
+//      pManagerScript.lives++;
         //Debug.Log(pManagerScript.lives);
         if (pManagerScript.lives==2)
         {
