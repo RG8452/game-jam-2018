@@ -18,47 +18,24 @@ public class HUDScript : MonoBehaviour
 
 	void Update()
 	{
-<<<<<<< HEAD
+
 		GameObject temp;
-		switch(pManagerScript.lives)
-		{
-			case 2:
-				temp = GameObject.Find("Life Point 1");
-				sr = temp.GetComponent<Image>();
-				sr.sprite = deadheart;
-				break;
-			case 1:
-				temp = GameObject.Find("Life Point 2");
-				sr = temp.GetComponent<Image>();
-				sr.sprite = deadheart;
-				break;
-			case 0:
-				temp = GameObject.Find("Life Point 3");
-				sr = temp.GetComponent<Image>();
-				sr.sprite = deadheart;
-				break;
-			default: break;
-		}
-	}
-}
-=======
-        Debug.Log(pManagerScript.lives);
         if(pManagerScript.lives==2)
         {
-            GameObject temp = GameObject.Find("Life Point 3");
+            temp = GameObject.Find("Life Point 3");
             
             Image sr = temp.GetComponent<Image>();
             sr.sprite = deadheart;
         }
         else if (pManagerScript.lives == 1)
         {
-            GameObject temp = GameObject.Find("Life Point 2");
+            temp = GameObject.Find("Life Point 2");
             Image sr = temp.GetComponent<Image>();
             sr.sprite = deadheart;
         }
         else if (pManagerScript.lives == 0)
         {
-            GameObject temp = GameObject.Find("Life Point 1");
+            temp = GameObject.Find("Life Point 1");
             Image sr = temp.GetComponent<Image>();
             sr.sprite = deadheart;
         }
@@ -66,4 +43,3 @@ public class HUDScript : MonoBehaviour
         temp2.GetComponent<Text>().text = "Time: "+Time.time.ToString("0.00"); ;
     }
 }
->>>>>>> 8b0ed082ae4235289a0c06e03b2ab1d4c0786652
