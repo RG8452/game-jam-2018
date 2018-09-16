@@ -18,7 +18,7 @@ public class PlayerControllerP2 : MonoBehaviour
 
 
 
-        if(Input.GetKeyDown(KeyCode.LeftShift)&&pmode)
+        if(Input.GetKeyDown(KeyCode.Tab)&&pmode)
         {
             if (playerstatus)
             {
