@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         {
             temp = Quaternion.Euler(0, 0, 90);
 
-            Instantiate(attackPrefab, this.transform.position, Quaternion.Euler(0, 0, 180));
+            Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 180));
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && !playerstatus)
         {
             temp = Quaternion.Euler(0, 0, 0);
-            Instantiate(attackPrefab, this.transform.position, Quaternion.Euler(0, 0, 90));
+            Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 90));
 
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow) && !playerstatus)
         {
             temp = Quaternion.Euler(0, 0, 270);
-            Instantiate(attackPrefab, this.transform.position, Quaternion.Euler(0, 0, 0));
+            Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 0));
 
 
         }
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow) && !playerstatus)
         {
             temp = Quaternion.Euler(0, 0, 180);
-            Instantiate(attackPrefab, this.transform.position, Quaternion.Euler(0, 0, 270));
+            Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 270));
 
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
             temp = Quaternion.Euler(0, 0, 180);
         }
 
-        this.transform.rotation = Quaternion.Lerp(this.transform.rotation, temp, 10f * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, temp, 10f * Time.deltaTime);
 
 
     }

@@ -5,10 +5,11 @@ using UnityEngine;
 public class ShieldScript : MonoBehaviour
 {
     private int counter = 0;
+	AudioSource deflectSound;
 
 	void Start()
 	{
-		
+		deflectSound = GetComponent<AudioSource>();
 	}
 	
 	void Update()
@@ -18,6 +19,7 @@ public class ShieldScript : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+		deflectSound.Play();
         if (col.gameObject.tag.Equals("Projectile"))
         {
             Destroy(col.gameObject);
