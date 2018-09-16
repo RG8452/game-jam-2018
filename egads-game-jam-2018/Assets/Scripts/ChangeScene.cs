@@ -6,7 +6,8 @@ public class ChangeScene : MonoBehaviour {
     
     public void changeToScene(int changeTheScene)
     {
+        Destroy(GameObject.Find("HUD"));
         SceneManager.LoadScene(changeTheScene);
-
+        
     }
 }

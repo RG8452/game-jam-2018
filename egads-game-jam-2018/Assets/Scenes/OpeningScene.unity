@@ -402,7 +402,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 804867801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4305d12204374cb4a8cbcd33ec00acea, type: 3}
+  m_Script: {fileID: 11500000, guid: 98f70bba470699f49a013b8bb16d0fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &822286992
@@ -513,7 +513,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "MERGE CONFLICT\t"
+  m_Text: Block.png
 --- !u!222 &912729055
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -679,7 +679,11 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+<<<<<<< Updated upstream
           m_IntArgument: 1
+=======
+          m_IntArgument: 2
+>>>>>>> Stashed changes
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1000,7 +1004,11 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+<<<<<<< Updated upstream
           m_IntArgument: 2
+=======
+          m_IntArgument: 3
+>>>>>>> Stashed changes
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
