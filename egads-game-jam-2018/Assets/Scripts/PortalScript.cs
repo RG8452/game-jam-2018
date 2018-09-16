@@ -118,7 +118,17 @@ public class PortalScript : MonoBehaviour
     {
 
         Vector3 v3 = portals[portal].transform.position;
-        Instantiate(slowProjectilePrefab, v3, Quaternion.identity);
+        if(portal==0)
+            Instantiate(slowProjectilePrefab, v3, Quaternion.Euler(0, 0, 270));
+        else if (portal == 1)
+            Instantiate(slowProjectilePrefab, v3, Quaternion.Euler(0, 0, 180));
+        else if (portal == 2)
+            
+            Instantiate(slowProjectilePrefab, v3, Quaternion.Euler(0, 0, 90));
+        else if (portal == 3)
+            Instantiate(slowProjectilePrefab, v3, Quaternion.Euler(0, 0, 0));
+
+
     }
     public float GetBaseSpeed()
     {
