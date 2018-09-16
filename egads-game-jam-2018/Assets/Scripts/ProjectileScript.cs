@@ -27,24 +27,17 @@ public class ProjectileScript : MonoBehaviour
         {
             case 0:
                 transform.rotation = (Quaternion.Euler(0, 0, 270));
-                transform.Translate(new Vector3(move, 0, 0));
-
                 break;
             case 1:
                 transform.rotation = (Quaternion.Euler(0, 0, 180));
-                transform.Translate(new Vector3(move, 0, 0));
-
                 break;
             case 2:
-
                 transform.rotation = (Quaternion.Euler(0, 0, 90));
-                transform.Translate(new Vector3(move,0 , 0));
                 break;
             case 3:
                 transform.rotation = (Quaternion.Euler(0, 0, 0));
-                transform.Translate(new Vector3(move, 0, 0));
-
                 break;
         }
-	}
+        transform.Translate(new Vector3(move, 0, 0));
+    }
 }

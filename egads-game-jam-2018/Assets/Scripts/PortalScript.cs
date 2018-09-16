@@ -8,10 +8,10 @@ public class PortalScript : MonoBehaviour
 	public GameObject projectilePrefab;
     public GameObject fastProjectilePrefab;
     public GameObject slowProjectilePrefab;
-    private const float BASE_PROJECTILE_SPEED = 1.5f;
+    private const float BASE_PROJECTILE_SPEED = 1.25f;
     private float lastFireTime;
-    private float timeToFire = 2f;
-    private float spawnRate = 2.00f;
+//  private float timeToFire = 2f;
+    private float spawnRate = 1.33f;
     private float projectileSpeed = BASE_PROJECTILE_SPEED;
 	GameObject projectile;
     ShieldScript shieldScript;
@@ -24,23 +24,18 @@ public class PortalScript : MonoBehaviour
                                     GameObject.Find("Portal (2)"), GameObject.Find("Portal (3)") };
         shieldScript = GameObject.Find("Shield").GetComponent<ShieldScript>();
         lastFireTime = Time.time;
-        InvokeRepeating("ShootProjectile", 0, spawnRate);
     }
 
 	void Update()
 	{
-        if(Time.time - lastFireTime > timeToFire)
+        if(Time.time - lastFireTime > spawnRate)
         {
+            shootProjectile();
+            lastFireTime = Time.time;
         }
-        timeToFire = (float)(2 - .05 * ((int)(shieldScript.getBlockCount() / 5)));
-        projectileSpeed = (float)(1 + (shieldScript.getBlockCount() / 75.0));
-        
-        //timeToFire = (float)(2 - .1 * ((int)(shieldScript.getBlockCount() / 5)));
-        //Debug.Log(timeToFire);
-        //projectileSpeed = (float)(1 + (shieldScript.getBlockCount() / 75.0));
-        //Debug.Log(projectileSpeed);
     }
-    public void ShootProjectile()
+
+    public void shootProjectile()
     {
         int rngesus = Random.Range(0, 100);
         if (rngesus <= 66)
@@ -55,28 +50,28 @@ public class PortalScript : MonoBehaviour
         {
             Instantiate(fastProjectilePrefab);
         }
-        if (shieldScript.getBlockCount() % 75 == 0 && temp != shieldScript.getBlockCount()) 
+        if (shieldScript.getBlockCount() < 100)
         {
-            projectileSpeed += 1;
-        }
-        if (shieldScript.getBlockCount() % 5 == 0 && temp != shieldScript.getBlockCount()) 
-        {
-            Debug.Log(shieldScript.getBlockCount() + "  " + temp + "  " + spawnRate);
-            spawnRate *=0.95f;
-            if(spawnRate<0.5)
+            projectileSpeed += .01f;
+            if(shieldScript.getBlockCount() % 4 == 0)
             {
-                spawnRate = 0.5f;
+                spawnRate -= .035f;
             }
-            temp = shieldScript.getBlockCount();
-            Repeater();
+        }
+        else
+        {
+            if(shieldScript.getBlockCount() % 6 == 0)
+            {
+                spawnRate -= .01f;
+                if(spawnRate < .1)
+                {
+                    spawnRate = .1f;
+                }
+                projectileSpeed += .008f;
+            }
         }
     }
-    public void Repeater()
-    {
-       
-        CancelInvoke("ShootProjectile");
-        InvokeRepeating("ShootProjectile", 0, spawnRate);
-    }
+
     public float GetBaseSpeed()
     {
         return projectileSpeed;
