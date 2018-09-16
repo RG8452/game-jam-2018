@@ -34,7 +34,7 @@ public class PlayerManager : MonoBehaviour
             }
             if (lives <= 0)
             {
-                Destroy(gameObject);
+//                Destroy(gameObject);
                 SceneManager.LoadScene("EndingScene");
             }
         }
