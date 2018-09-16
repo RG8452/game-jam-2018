@@ -18,8 +18,11 @@ public class ShieldScript : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        Destroy(col.gameObject);
-        ++counter;
+        if (col.gameObject.tag.Equals("Projectile"))
+        {
+            Destroy(col.gameObject);
+            ++counter;
+        }
     }
 
     public int getBlockCount()

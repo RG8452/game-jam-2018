@@ -40,10 +40,6 @@ Prefab:
       propertyPath: m_Size.z
       value: 0.7
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: player
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1450008720918802}
@@ -78,7 +74,7 @@ GameObject:
   - component: {fileID: 54469034850976120}
   - component: {fileID: 114142121055114224}
   m_Layer: 0
-  m_Name: SlowProjectile
+  m_Name: SlowProjectileP2
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   portalScript: {fileID: 0}
-  player: 1
+  player: 0
 --- !u!198 &198125665125582732
 ParticleSystem:
   m_ObjectHideFlags: 1

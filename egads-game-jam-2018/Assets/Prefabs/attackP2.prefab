@@ -10,7 +10,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ad5a4a93d45ab644290fd3c2ed3da30a,
+      objectReference: {fileID: 21300000, guid: 05781b381df69964499e6f0ca6935abb,
         type: 3}
     - target: {fileID: 0}
       propertyPath: m_Size.x
@@ -41,10 +41,11 @@ Prefab:
       value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: player
+      propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1450008720918802}
   m_IsPrefabParent: 0
@@ -76,9 +77,9 @@ GameObject:
   - component: {fileID: 212070635661371710}
   - component: {fileID: 65582929747495986}
   - component: {fileID: 54469034850976120}
-  - component: {fileID: 114142121055114224}
+  - component: {fileID: 114491916181393020}
   m_Layer: 0
-  m_Name: SlowProjectile
+  m_Name: attackP2
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +139,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.7, z: 0.7}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114142121055114224
+--- !u!114 &114491916181393020
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -146,12 +147,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1450008720918802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea04849164d3da04aaaee2b006971414, type: 3}
+  m_Script: {fileID: 11500000, guid: b60441a24811afa42b5282a267675410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
   portalScript: {fileID: 0}
-  player: 1
+  player: 0
 --- !u!198 &198125665125582732
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3361,7 +3362,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ad5a4a93d45ab644290fd3c2ed3da30a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05781b381df69964499e6f0ca6935abb, type: 3}
   m_Color: {r: 0.114542544, g: 0.735849, b: 0.43342328, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Portal
   - Projectile
+  - Undefined
+  - attack
   layers:
   - Default
   - TransparentFX

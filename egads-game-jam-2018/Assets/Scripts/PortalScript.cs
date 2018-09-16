@@ -16,18 +16,31 @@ public class PortalScript : MonoBehaviour
 	GameObject projectile;
     ShieldScript shieldScript;
     int temp = 0;
-
-
-	void Start()
+    public bool player;
+    private int portalIndex;
+    Vector3 v3;
+    void Start()
 	{
-        portals = new GameObject[] {GameObject.Find("Portal"), GameObject.Find("Portal (1)"),
+
+        if (player)
+        {
+
+            portals = new GameObject[] {GameObject.Find("Portal (0)"), GameObject.Find("Portal (1)"),
                                     GameObject.Find("Portal (2)"), GameObject.Find("Portal (3)") };
-        shieldScript = GameObject.Find("Shield").GetComponent<ShieldScript>();
+            shieldScript = GameObject.Find("Shield").GetComponent<ShieldScript>();
+        }
+        else
+        {
+            portals = new GameObject[] {GameObject.Find("PortalP2"), GameObject.Find("Portal (1)P2"),
+                                    GameObject.Find("Portal (2P2)"), GameObject.Find("Portal (3)P2") };
+            shieldScript = GameObject.Find("ShieldP2").GetComponent<ShieldScript>();
+        }
         lastFireTime = Time.time;
     }
 
 	void Update()
 	{
+        //Debug.Log(player+"   "+portals[0].name);
         if(Time.time - lastFireTime > spawnRate)
         {
             shootProjectile();
@@ -40,15 +53,44 @@ public class PortalScript : MonoBehaviour
         int rngesus = Random.Range(0, 100);
         if (rngesus <= 66)
         {
-            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            portalIndex = Random.Range(0, portals.Length);
+            Vector3 v3 = portals[portalIndex].transform.position;
+            if (portalIndex == 0)
+                Instantiate(projectilePrefab, v3, Quaternion.Euler(0, 0, 270));
+            else if (portalIndex == 1)
+                Instantiate(projectilePrefab, v3, Quaternion.Euler(0, 0, 180));
+            else if (portalIndex == 2)
+                Instantiate(projectilePrefab, v3, Quaternion.Euler(0, 0, 90));
+            else if (portalIndex == 3)
+                Instantiate(projectilePrefab, v3, Quaternion.Euler(0, 0, 0));
         }
         else if (rngesus <= 80)
         {
-            Instantiate(slowProjectilePrefab);
+            portalIndex = Random.Range(0, portals.Length);
+            Vector3 v3 = portals[portalIndex].transform.position;
+            if (portalIndex == 0)
+                Instantiate(slowProjectilePrefab, v3, Quaternion.Euler(0, 0, 270));
+            else if (portalIndex == 1)
+                Instantiate(slowProjectilePrefab, v3, Quaternion.Euler(0, 0, 180));
+            else if (portalIndex == 2)
+                Instantiate(slowProjectilePrefab, v3, Quaternion.Euler(0, 0, 90));
+            else if (portalIndex == 3)
+                Instantiate(slowProjectilePrefab, v3, Quaternion.Euler(0, 0, 0));
+
         }
         else
         {
-            Instantiate(fastProjectilePrefab);
+            portalIndex = Random.Range(0, portals.Length);
+            Vector3 v3 = portals[portalIndex].transform.position;
+            Debug.Log("" + v3);
+            if(portalIndex==0)
+                Instantiate(fastProjectilePrefab, v3, Quaternion.Euler(0, 0, 270));
+            else if (portalIndex == 1)
+                Instantiate(fastProjectilePrefab, v3, Quaternion.Euler(0, 0, 180));
+            else if (portalIndex == 2)
+                Instantiate(fastProjectilePrefab, v3, Quaternion.Euler(0, 0, 90));
+            else if (portalIndex == 3)
+                Instantiate(fastProjectilePrefab, v3, Quaternion.Euler(0, 0, 0));
         }
         if (shieldScript.getBlockCount() < 100)
         {
@@ -71,7 +113,12 @@ public class PortalScript : MonoBehaviour
             }
         }
     }
+    public void attackSpawn(int portal)
+    {
 
+        Vector3 v3 = portals[portal].transform.position;
+        Instantiate(slowProjectilePrefab, v3, Quaternion.identity);
+    }
     public float GetBaseSpeed()
     {
         return projectileSpeed;
