@@ -18,14 +18,17 @@ public class PlayerManager : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+        if (col.gameObject.tag.Equals("Projectile"))
+        { 
         lives--;
         Destroy(col.gameObject);
         GameObject.Find("Main Camera").GetComponent<CameraShake>().DoShake();
 
-		if(lives <= 0)
-		{
+        if (lives <= 0)
+        {
             //Destroy(gameObject);
             SceneManager.LoadScene("EndingScene");
-		}
+        }
+    }
     }
 }

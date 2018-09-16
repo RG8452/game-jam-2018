@@ -31,13 +31,15 @@ public class CameraShake : MonoBehaviour
         else if (Shaking)
         {
             Shaking = false;
+            transform.position = new Vector3(0, 0, -10); 
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
     public void DoShake()
     {
-        OriginalPos = transform.position;
-        OriginalRot = transform.rotation;
+        OriginalPos = new Vector3(0,0,-10);
+        OriginalRot = Quaternion.Euler(0, 0, 0); 
 
         ShakeIntensity = 0.2f;
         ShakeDecay = 0.02f;
