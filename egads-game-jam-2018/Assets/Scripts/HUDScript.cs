@@ -42,10 +42,11 @@ public class HUDScript : MonoBehaviour
         }
         pManagerScriptP2.lives++;
         if (player)
+        {
             if (pManagerScriptP2.lives == 2)
             {
                 GameObject temp2 = GameObject.Find("Life Point 3P2");
-    
+
                 Image sr2 = temp2.GetComponent<Image>();
                 sr2.sprite = deadheart;
             }
@@ -61,6 +62,7 @@ public class HUDScript : MonoBehaviour
                 Image sr2 = temp2.GetComponent<Image>();
                 sr2.sprite = deadheart;
             }
+        }
         //GameObject temp2 = GameObject.Find("Score");
         //temp2.GetComponent<Text>().text = "Time: "+Time.time.ToString("0.00"); ;
     }
