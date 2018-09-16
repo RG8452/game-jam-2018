@@ -26,29 +26,19 @@ public class ProjectileScript : MonoBehaviour
         switch(portalIndex)
         {
             case 0:
-<<<<<<< Updated upstream
                 transform.rotation = (Quaternion.Euler(0, 0, 270));
                 transform.Translate(new Vector3(move, 0, 0));
-
-=======
-                transform.Translate(new Vector3(0, -move, 0));
->>>>>>> Stashed changes
                 break;
             case 1:
                 transform.rotation = (Quaternion.Euler(0, 0, 180));
-                transform.Translate(new Vector3(move, 0, 0));
-
                 break;
             case 2:
-
                 transform.rotation = (Quaternion.Euler(0, 0, 90));
-                transform.Translate(new Vector3(move,0 , 0));
                 break;
             case 3:
                 transform.rotation = (Quaternion.Euler(0, 0, 0));
-                transform.Translate(new Vector3(move, 0, 0));
-
                 break;
         }
-	}
+        transform.Translate(new Vector3(move, 0, 0));
+    }
 }
