@@ -18,7 +18,6 @@ public class HUDScript : MonoBehaviour
 
 	void Update()
 	{
-
 		GameObject temp;
         if(pManagerScript.lives==2)
         {
@@ -40,6 +39,6 @@ public class HUDScript : MonoBehaviour
             sr.sprite = deadheart;
         }
         GameObject temp2 = GameObject.Find("Score");
-        temp2.GetComponent<Text>().text = "Time: "+Time.time.ToString("0.00"); ;
+        temp2.GetComponent<Text>().text = "Time: " + Time.time.ToString("0.00");
     }
 }
