@@ -18,7 +18,7 @@ public class PlayerManager : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        lives--;
+        lives++;
         Destroy(col.gameObject);
         GameObject.Find("Main Camera").GetComponent<CameraShake>().DoShake();
 
