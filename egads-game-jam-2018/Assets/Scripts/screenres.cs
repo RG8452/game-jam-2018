@@ -10,7 +10,7 @@ public class screenres : MonoBehaviour {
         if(pmode)
             Screen.SetResolution(720,720, false);
         else 
-            Screen.SetResolution(1480, 720, false);
+            Screen.SetResolution(1920, 720, false);
     }
 	
 	// Update is called once per frame
