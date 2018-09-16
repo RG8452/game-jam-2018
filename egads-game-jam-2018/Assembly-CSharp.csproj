@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\PortalScript.cs" />
      <Compile Include="Assets\Scripts\PortalScriptMultiplayer.cs" />
      <Compile Include="Assets\Scripts\ProjectileScript.cs" />
+     <Compile Include="Assets\Scripts\screenres.cs" />
      <Compile Include="Assets\Scripts\ShieldScript.cs" />
      <Compile Include="Assets\Scripts\SlowProjectileScript.cs" />
  <Reference Include="UnityEditor.StandardEvents">
