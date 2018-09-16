@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 23442253}
   - component: {fileID: 23442254}
   - component: {fileID: 23442252}
+  - component: {fileID: 23442255}
   m_Layer: 0
   m_Name: Portal (2)
   m_TagString: Portal
@@ -187,6 +188,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!95 &23442255
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23442250}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ae4d242520fa0a4fb41cdf26fccbb43, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &78467951
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +666,7 @@ GameObject:
   - component: {fileID: 359893866}
   - component: {fileID: 359893865}
   - component: {fileID: 359893864}
+  - component: {fileID: 359893867}
   m_Layer: 0
   m_Name: Portal (0)
   m_TagString: Portal
@@ -710,6 +730,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!95 &359893867
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359893862}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6da1d7acf62aaae46af6d26462497f29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &419958125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,6 +1219,7 @@ GameObject:
   - component: {fileID: 637949531}
   - component: {fileID: 637949530}
   - component: {fileID: 637949529}
+  - component: {fileID: 637949532}
   m_Layer: 0
   m_Name: Portal (2)P2
   m_TagString: Portal
@@ -1244,6 +1283,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.77559566, z: 1}
   m_Center: {x: 0, y: -0.11220217, z: 0}
+--- !u!95 &637949532
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 637949527}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ae4d242520fa0a4fb41cdf26fccbb43, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &645846178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,6 +2084,7 @@ GameObject:
   - component: {fileID: 1224936239}
   - component: {fileID: 1224936238}
   - component: {fileID: 1224936237}
+  - component: {fileID: 1224936240}
   m_Layer: 0
   m_Name: Portal (3)
   m_TagString: Portal
@@ -2090,6 +2148,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.76922655, y: 1, z: 1}
   m_Center: {x: -0.115386724, y: 0, z: 0}
+--- !u!95 &1224936240
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224936235}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09868a00e2e92244f95cfb36825ca462, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1375091072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,6 +2177,7 @@ GameObject:
   - component: {fileID: 1375091076}
   - component: {fileID: 1375091075}
   - component: {fileID: 1375091074}
+  - component: {fileID: 1375091077}
   m_Layer: 0
   m_Name: Portal (1)P2
   m_TagString: Portal
@@ -2164,6 +2241,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7818141, y: 1, z: 1}
   m_Center: {x: 0.10909295, y: 0, z: 0}
+--- !u!95 &1375091077
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375091072}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 393d8299004039247a222377af150114, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1396346501
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,6 +2414,7 @@ GameObject:
   - component: {fileID: 1588260244}
   - component: {fileID: 1588260243}
   - component: {fileID: 1588260242}
+  - component: {fileID: 1588260245}
   m_Layer: 0
   m_Name: Portal (3)P2
   m_TagString: Portal
@@ -2382,6 +2478,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!95 &1588260245
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1588260240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09868a00e2e92244f95cfb36825ca462, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1612356320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,6 +2507,7 @@ GameObject:
   - component: {fileID: 1612356324}
   - component: {fileID: 1612356323}
   - component: {fileID: 1612356322}
+  - component: {fileID: 1612356325}
   m_Layer: 0
   m_Name: Portal (1)
   m_TagString: Portal
@@ -2456,6 +2571,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7776184, y: 1, z: 1}
   m_Center: {x: 0.111190796, y: 0, z: 0}
+--- !u!95 &1612356325
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1612356320}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 393d8299004039247a222377af150114, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1679352401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,6 +2905,7 @@ GameObject:
   - component: {fileID: 2026662245}
   - component: {fileID: 2026662244}
   - component: {fileID: 2026662243}
+  - component: {fileID: 2026662246}
   m_Layer: 0
   m_Name: Portal (0)P2
   m_TagString: Portal
@@ -2835,3 +2969,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!95 &2026662246
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026662241}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6da1d7acf62aaae46af6d26462497f29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
