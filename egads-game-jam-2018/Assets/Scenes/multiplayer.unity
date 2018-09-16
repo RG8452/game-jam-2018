@@ -180,7 +180,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 1
 --- !u!1 &78467951
 GameObject:
@@ -1853,6 +1853,7 @@ GameObject:
   - component: {fileID: 1224465223}
   - component: {fileID: 1224465222}
   - component: {fileID: 1224465221}
+  - component: {fileID: 1224465225}
   m_Layer: 0
   m_Name: PlayerP2
   m_TagString: Player
@@ -1920,9 +1921,23 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1224465219}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4af9741bb410a79459864842acccce4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPrefab: {fileID: 1450008720918802, guid: a6560ba25cc0de6429cf8d9fb00d7209,
+    type: 2}
+  pmode: 1
+--- !u!114 &1224465225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224465219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2794617c8af9f143a515efef444332a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackPrefab: {fileID: 1450008720918802, guid: a6560ba25cc0de6429cf8d9fb00d7209,

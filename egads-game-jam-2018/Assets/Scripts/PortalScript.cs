@@ -31,8 +31,8 @@ public class PortalScript : MonoBehaviour
         }
         else
         {
-            portals = new GameObject[] {GameObject.Find("PortalP2"), GameObject.Find("Portal (1)P2"),
-                                    GameObject.Find("Portal (2P2)"), GameObject.Find("Portal (3)P2") };
+            portals = new GameObject[] {GameObject.Find("Portal (0)P2"), GameObject.Find("Portal (1)P2"),
+                                    GameObject.Find("Portal (2)P2"), GameObject.Find("Portal (3)P2") };
             shieldScript = GameObject.Find("ShieldP2").GetComponent<ShieldScript>();
         }
         lastFireTime = Time.time;
@@ -55,6 +55,7 @@ public class PortalScript : MonoBehaviour
         {
             portalIndex = Random.Range(0, portals.Length);
             Vector3 v3 = portals[portalIndex].transform.position;
+            Debug.Log(portalIndex+ "   " + v3);
             if (portalIndex == 0)
                 Instantiate(projectilePrefab, v3, Quaternion.Euler(0, 0, 270));
             else if (portalIndex == 1)

@@ -19,8 +19,9 @@ public class HUDScript : MonoBehaviour
 
 	void Update()
 	{
+        pManagerScript.lives++;
         //Debug.Log(pManagerScript.lives);
-        if(pManagerScript.lives==2)
+        if (pManagerScript.lives==2)
         {
             GameObject temp = GameObject.Find("Life Point 3");
             
@@ -39,8 +40,8 @@ public class HUDScript : MonoBehaviour
             Image sr = temp.GetComponent<Image>();
             sr.sprite = deadheart;
         }
-        
-        if(player)
+        pManagerScriptP2.lives++;
+        if (player)
             if (pManagerScriptP2.lives == 2)
             {
                 GameObject temp2 = GameObject.Find("Life Point 3P2");
