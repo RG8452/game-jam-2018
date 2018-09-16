@@ -95,15 +95,17 @@ public class PortalScript : MonoBehaviour
         }
         if (shieldScript.getBlockCount() < 100)
         {
+            
             projectileSpeed += .01f;
-            if(shieldScript.getBlockCount() % 4 == 0)
+            if(shieldScript.getBlockCount() % 4 == 0&&temp!= shieldScript.getBlockCount())
             {
                 spawnRate -= .035f;
             }
+            temp = shieldScript.getBlockCount();
         }
         else
         {
-            if(shieldScript.getBlockCount() % 6 == 0)
+            if(shieldScript.getBlockCount() % 6 == 0 && temp != shieldScript.getBlockCount())
             {
                 spawnRate -= .01f;
                 if(spawnRate < .1)
@@ -112,6 +114,7 @@ public class PortalScript : MonoBehaviour
                 }
                 projectileSpeed += .008f;
             }
+            temp = shieldScript.getBlockCount();
         }
     }
     public void attackSpawn(int portal)
