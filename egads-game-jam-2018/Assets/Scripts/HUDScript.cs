@@ -64,7 +64,5 @@ public class HUDScript : MonoBehaviour
                 sr2.sprite = deadheart;
             }
         }
-        //GameObject temp2 = GameObject.Find("Score");
-        //temp2.GetComponent<Text>().text = "Time: "+Time.time.ToString("0.00"); ;
     }
 }

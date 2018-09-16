@@ -55,7 +55,6 @@ public class PortalScript : MonoBehaviour
         {
             portalIndex = Random.Range(0, portals.Length);
             Vector3 v3 = portals[portalIndex].transform.position;
-            Debug.Log(portalIndex+ "   " + v3);
             if (portalIndex == 0)
                 Instantiate(projectilePrefab, v3, Quaternion.Euler(0, 0, 270));
             else if (portalIndex == 1)
@@ -83,7 +82,6 @@ public class PortalScript : MonoBehaviour
         {
             portalIndex = Random.Range(0, portals.Length);
             Vector3 v3 = portals[portalIndex].transform.position;
-            Debug.Log("" + v3);
             if(portalIndex==0)
                 Instantiate(fastProjectilePrefab, v3, Quaternion.Euler(0, 0, 270));
             else if (portalIndex == 1)

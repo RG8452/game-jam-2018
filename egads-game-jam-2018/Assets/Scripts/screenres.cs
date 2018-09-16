@@ -6,7 +6,6 @@ public class screenres : MonoBehaviour {
     public bool pmode;
     // Use this for initialization
 	void Start () {
-        Debug.Log("Asdf");
         if(pmode)
             Screen.SetResolution(720,720, false);
         else 

@@ -9,9 +9,11 @@ public class PlayerController : MonoBehaviour
     bool playerstatus = true;
     GameObject shield;
     Quaternion temp;
+	public float rotSpeed;
     void Start()
     {
         shield = GameObject.Find("Shield");
+		rotSpeed = 10f;
     }
 
     void Update()
@@ -79,7 +81,7 @@ public class PlayerController : MonoBehaviour
             temp = Quaternion.Euler(0, 0, 180);
         }
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, temp, 10f * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, temp, rotSpeed * Time.deltaTime);
 
 
     }
