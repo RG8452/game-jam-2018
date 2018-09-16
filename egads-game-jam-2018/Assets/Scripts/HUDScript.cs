@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//using UnityEngine.SceneManagement
 public class HUDScript : MonoBehaviour
 {
 	PlayerManager pManagerScript;
@@ -58,6 +58,7 @@ public class HUDScript : MonoBehaviour
             }
             else if (pManagerScriptP2.lives == 0)
             {
+               // SceneManager.LoadScene("EndingScene");
                 GameObject temp2 = GameObject.Find("Life Point 1P2");
                 Image sr2 = temp2.GetComponent<Image>();
                 sr2.sprite = deadheart;
