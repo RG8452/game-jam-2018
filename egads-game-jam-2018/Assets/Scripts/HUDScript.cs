@@ -36,6 +36,7 @@ public class HUDScript : MonoBehaviour
             Image sr = temp.GetComponent<Image>();
             sr.sprite = deadheart;
         }
-
+        GameObject temp2 = GameObject.Find("Score");
+        temp2.GetComponent<Text>().text = "Time: "+Time.time.ToString("0.00"); ;
     }
 }
