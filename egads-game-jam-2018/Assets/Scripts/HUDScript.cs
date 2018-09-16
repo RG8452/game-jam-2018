@@ -9,6 +9,9 @@ public class HUDScript : MonoBehaviour
     PlayerManager pManagerScriptP2;
     public Sprite deadheart;
 	public GameObject[] lives;
+	public Image gameBG;
+	float timeLeft;
+	Color targetColor;
     public bool player;
 	void Start()
 	{
@@ -64,5 +67,30 @@ public class HUDScript : MonoBehaviour
                 sr2.sprite = deadheart;
             }
         }
+
+		ChangeBGColor(gameBG);
     }
+
+	void ChangeBGColor(Image bg)
+	{
+		if(timeLeft <= Time.deltaTime)
+		{
+			// transition complete
+			// assign the target color
+			gameBG.color = targetColor;
+
+			// start a new transition
+			targetColor = new Color(Random.value, Random.value, Random.value);
+			timeLeft = 5f;
+		}
+		else
+		{
+			// transition in progress
+			// calculate interpolated color
+			gameBG.color = Color.Lerp(gameBG.color, targetColor, Time.deltaTime / timeLeft);
+
+			// update the timer
+			timeLeft -= Time.deltaTime;
+		}
+	}
 }
