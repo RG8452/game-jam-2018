@@ -10,10 +10,14 @@ public class PlayerController : MonoBehaviour
     GameObject shield;
     Quaternion temp;
 	public float rotSpeed;
+    private float lastFire;
+    private const float secondsBetweenShots = 1.5f;
+
     void Start()
     {
         shield = GameObject.Find("Shield");
 		rotSpeed = 10f;
+        lastFire = Time.time;
     }
 
     void Update()
@@ -42,8 +46,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow)&& !playerstatus)
         {
             temp = Quaternion.Euler(0, 0, 90);
-
-            Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 180));
+            if(Time.time - lastFire > secondsBetweenShots)
+            {
+                Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 180));
+                lastFire = Time.time;
+            }
         }
         else if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -52,8 +59,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && !playerstatus)
         {
             temp = Quaternion.Euler(0, 0, 0);
-            Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 90));
-
+            if (Time.time - lastFire > secondsBetweenShots)
+            {
+                Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 90));
+                lastFire = Time.time;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -62,9 +72,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow) && !playerstatus)
         {
             temp = Quaternion.Euler(0, 0, 270);
-            Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 0));
-
-
+            if (Time.time - lastFire > secondsBetweenShots)
+            {
+                Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 0));
+                lastFire = Time.time;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -73,8 +85,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow) && !playerstatus)
         {
             temp = Quaternion.Euler(0, 0, 180);
-            Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 270));
-
+            if (Time.time - lastFire > secondsBetweenShots)
+            {
+                Instantiate(attackPrefab, transform.position, Quaternion.Euler(0, 0, 270));
+                lastFire = Time.time;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
