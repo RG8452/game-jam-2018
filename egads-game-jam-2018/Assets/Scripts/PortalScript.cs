@@ -15,8 +15,9 @@ public class PortalScript : MonoBehaviour
     private float projectileSpeed = BASE_PROJECTILE_SPEED;
 	GameObject projectile;
     ShieldScript shieldScript;
-    
     int temp = 0;
+
+
 	void Start()
 	{
         portals = new GameObject[] {GameObject.Find("Portal"), GameObject.Find("Portal (1)"),

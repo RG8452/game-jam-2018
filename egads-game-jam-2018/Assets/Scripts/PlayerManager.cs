@@ -14,13 +14,11 @@ public class PlayerManager : MonoBehaviour
 
 	void Update()
 	{
-		print("Lives: " + lives);
 	}
 
     void OnCollisionEnter(Collision col)
     {
         lives--;
-		print(col.gameObject.name);
         Destroy(col.gameObject);
 
 		if(lives <= 0)
