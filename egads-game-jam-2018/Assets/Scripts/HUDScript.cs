@@ -40,7 +40,7 @@ public class HUDScript : MonoBehaviour
             Image sr = temp.GetComponent<Image>();
             sr.sprite = deadheart;
         }
-        pManagerScriptP2.lives++;
+        //pManagerScriptP2.lives++;
         if (player)
         {
             if (pManagerScriptP2.lives == 2)
