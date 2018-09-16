@@ -80,7 +80,7 @@ public class HUDScript : MonoBehaviour
 			gameBG.color = targetColor;
 
 			// start a new transition
-			targetColor = new Color(Random.value, Random.value, Random.value);
+			targetColor = new Color(Random.value, Random.value, Random.value, 0.2f);
 			timeLeft = 5f;
 		}
 		else
