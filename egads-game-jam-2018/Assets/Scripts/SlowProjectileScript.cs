@@ -15,7 +15,7 @@ public class SlowProjectileScript : MonoBehaviour
 
     void Start()
     {
-        moveSpeed = portalScript.getBaseSpeed() / 2;
+        moveSpeed = portalScript.GetBaseSpeed() / 2;
         portalIndex = Random.Range(0, portalScript.portals.Length - 1);
         gameObject.transform.position = portalScript.portals[portalIndex].transform.position;
     }
@@ -23,7 +23,7 @@ public class SlowProjectileScript : MonoBehaviour
     void Update()
     {
         float move = moveSpeed * Time.deltaTime;
-        switch (portalIndex)
+        switch(portalIndex)
         {
             case 0:
                 transform.rotation = (Quaternion.Euler(0, 0, 270));

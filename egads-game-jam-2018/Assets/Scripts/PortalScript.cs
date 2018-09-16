@@ -23,7 +23,7 @@ public class PortalScript : MonoBehaviour
                                     GameObject.Find("Portal (2)"), GameObject.Find("Portal (3)") };
         shieldScript = GameObject.Find("Shield").GetComponent<ShieldScript>();
         lastFireTime = Time.time;
-        InvokeRepeating("shootProjectile", 0, spawnRate);
+        InvokeRepeating("ShootProjectile", 0, spawnRate);
     }
 
 	void Update()
@@ -39,12 +39,12 @@ public class PortalScript : MonoBehaviour
         //projectileSpeed = (float)(1 + (shieldScript.getBlockCount() / 75.0));
         //Debug.Log(projectileSpeed);
     }
-    public void shootProjectile()
+    public void ShootProjectile()
     {
         int rngesus = Random.Range(0, 100);
         if (rngesus <= 66)
         {
-            Instantiate(projectilePrefab);
+            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         }
         else if (rngesus <= 80)
         {
@@ -67,20 +67,16 @@ public class PortalScript : MonoBehaviour
                 spawnRate = 0.5f;
             }
             temp = shieldScript.getBlockCount();
-            repeater();
-
+            Repeater();
         }
-
-
-
     }
-    public void repeater()
+    public void Repeater()
     {
        
-        CancelInvoke("shootProjectile");
-        InvokeRepeating("shootProjectile", 0, spawnRate);
+        CancelInvoke("ShootProjectile");
+        InvokeRepeating("ShootProjectile", 0, spawnRate);
     }
-    public float getBaseSpeed()
+    public float GetBaseSpeed()
     {
         return projectileSpeed;
     }
