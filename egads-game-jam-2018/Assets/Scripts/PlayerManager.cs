@@ -20,6 +20,7 @@ public class PlayerManager : MonoBehaviour
     {
         lives--;
         Destroy(col.gameObject);
+        GameObject.Find("Main Camera").GetComponent<CameraShake>().DoShake();
 
 		if(lives <= 0)
 		{
